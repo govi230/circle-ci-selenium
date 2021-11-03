@@ -2,7 +2,8 @@ version: 2.1
 jobs:
   chromedriver_job:
     docker:
-      - image: govindbhardwaj/node-10.15.3:webdrivers-v1
+      #- image: govindbhardwaj/node-10.15.3:webdrivers-v1
+      - image: govindbhardwaj/node:10.15.3-webdrivers-v2
     resource_class: small
     steps:
       - run:

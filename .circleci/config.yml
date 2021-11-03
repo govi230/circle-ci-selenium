@@ -1,0 +1,20 @@
+version: 2.1
+jobs:
+  chromedriver_job:
+    docker:
+      - image: govindbhardwaj/node-10.15.3:webdrivers-v1
+    resource_class: small
+    steps:
+      - run:
+          name: Install chromedriver
+          command: |
+            npm install chromedriver
+          when: always
+workflows:
+  chromedriver_workflow:
+    jobs:
+      - chromedriver_job:
+          filters:
+            branches:
+              only:
+                - master

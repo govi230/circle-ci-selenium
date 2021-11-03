@@ -10,7 +10,8 @@ jobs:
           name: Install chromedriver
           command: |
             whoami
-            ls -l
+            ls -l /root/project
+            ls -l /root
             npm install chromedriver
           when: always
 workflows:

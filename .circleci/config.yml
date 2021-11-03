@@ -3,7 +3,8 @@ jobs:
   chromedriver_job:
     docker:
       #- image: govindbhardwaj/node-10.15.3:webdrivers-v1
-      - image: govindbhardwaj/node:10.15.3-webdrivers-v2
+      #- image: govindbhardwaj/node:10.15.3-webdrivers-v2
+      - image: node:10.15.3
     resource_class: small
     steps:
       - run:
@@ -12,7 +13,7 @@ jobs:
             whoami
             ls -l /root/project
             ls -l /root
-            npm install chromedriver --allow-root
+            npm install chromedriver
           when: always
 workflows:
   chromedriver_workflow:

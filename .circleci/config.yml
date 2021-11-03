@@ -12,7 +12,7 @@ jobs:
             whoami
             ls -l /root/project
             ls -l /root
-            npm install chromedriver
+            npm install chromedriver --allow-root
           when: always
 workflows:
   chromedriver_workflow:
